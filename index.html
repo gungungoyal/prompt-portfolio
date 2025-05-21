@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prompt Portfolio</title>
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --accent: #2563eb;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --hover: #f1f5f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 5px;
+      margin-top: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+      background: var(--card);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #f3f4f6;
+    }
+
+    tr:hover {
+      background-color: var(--hover);
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #1e40af;
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Prompt Portfolio</h1>
+    <input type="text" id="searchInput" placeholder="Search prompts or acts..." onkeyup="filterPrompts()" />
+
+    <!-- TECHNICAL -->
+    <h2>Technical</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Front-end Developer</td>
+          <td>Act as a frontend developer and create a book website using html, css, js and bootstrap components.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Interviewer</td>
+          <td>Act as a technical interviewer for a front-end development role. Ask me 5 situational and technical questions to assess my problem-solving and coding skills.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>UX Designer</td>
+          <td>Act as a UX designer. Review the layout and navigation of my portfolio website and give feedback to improve user experience and mobile responsiveness.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- CAREER -->
+    <h2>Career & Coaching</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Career Coach</td>
+          <td>Act as a career coach. Guide a final-year college student who is confused between technical and HR career paths. Ask insightful questions to help them choose.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Resume Writing Expert</td>
+          <td>Act as a professional resume consultant. Rewrite the following resume summary to make it more impactful, personalized, and ATS-friendly for a software developer role.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- MARKETING -->
+    <h2>Marketing</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Marketing Strategist</td>
+          <td>Act as a digital marketing strategist. Create a content calendar for an eco-friendly startup targeting Gen Z customers across Instagram and LinkedIn.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- BUSINESS -->
+    <h2>Business</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Product Manager</td>
+          <td>Act as a Product Manager. Review the following list of app features and suggest improvements focused on user experience and engagement. Then prioritize them in a feature roadmap.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Business Analyst</td>
+          <td>Act as a business analyst. Analyze the given customer feedback and identify three core pain points along with actionable suggestions to improve customer satisfaction.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>Startup Advisor</td>
+          <td>Act as a startup advisor. Help me validate my business idea for an AI-powered career guidance platform. Suggest key features and ways to test the idea quickly.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Language Tutor</td>
+          <td>Act as an English language tutor. Teach the difference between 'past perfect' and 'present perfect' using simple examples and practice sentences.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- WELLNESS -->
+    <h2>Health & Wellness</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Mental Wellness Coach</td>
+          <td>Act as a certified mental wellness coach. Guide the user through a short, calming breathing and reflection session to reduce stress and boost focus.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- RECRUITMENT -->
+    <h2>Recruitment</h2>
+    <table class="prompt-table">
+      <tbody>
+        <tr>
+          <td>Job Recruiter</td>
+          <td>Act as a recruiter at Choice Connect and tell me whether you would shortlist this resume.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+        <tr>
+          <td>LinkedIn Optimization Coach</td>
+          <td>Act as a LinkedIn profile expert. Review this summary and headline, and rewrite them to make them more searchable and attractive to tech recruiters.</td>
+          <td><button class="copy-btn" onclick="copyPrompt(this)">Copy</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script>
+    function copyPrompt(btn) {
+      const text = btn.closest("tr").children[1].textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "Copied!";
+        setTimeout(() => btn.textContent = "Copy", 1500);
+      });
+    }
+
+    function filterPrompts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const allTables = document.querySelectorAll(".prompt-table");
+
+      allTables.forEach(table => {
+        let anyVisible = false;
+        const rows = table.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          const match = text.includes(input);
+          row.style.display = match ? "" : "none";
+          if (match) anyVisible = true;
+        });
+
+        table.style.display = anyVisible ? "" : "none";
+        table.previousElementSibling.style.display = anyVisible ? "block" : "none"; // heading
+      });
+    }
+  </script>
+</body>
+</html>
